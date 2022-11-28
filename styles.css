@@ -1,0 +1,172 @@
+/* 
+    1. Posicionamiento (fixed, absolute)
+    2. Modelo de Caja (Box Model) (width, height, Margin, padding)
+    3. Tipografía
+    4. Cosas Visuales
+    5. Otros
+ */
+:root {
+    /*  Colores  */
+    --bitcoin-orange: #F7931A;
+    --soft-orange:  #FFE905;
+    --secundary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #fff;
+    --font-sans: 'DM Sans', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding: 0;
+}
+html {
+    font-size: x-small;
+    font-family: var(--font-sans);
+}
+
+header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: auto; */
+  place-items:center;
+  width: 100%;
+  min-width: 32rem;
+  height: 33.4rem;
+  text-align: center;
+  /* Gradinate ( Difuminado )*/
+  background: linear-gradient(207.8deg,#201E1C 16.69%, #F7931A 100%);
+}
+header img {
+  width: 15rem;
+  height: 2.4rem;
+  margin-top: 3rem;
+
+}
+
+.header--title-container {
+  width: 90%;
+  /* min-width: 28.8rem; */
+  max-width: 90rem;
+  height: 21.8rem;
+  margin-top: 4rem;
+}
+
+.header--title-container h1 {
+  /* min-width: 28.8rem; */
+  text-align:center;
+  font-weight: 700;
+  font-size: 2.4rem;
+  /* Interlineado */
+  line-height: 2.6rem;
+  color: var(--just-white);
+}
+.header--title-container > p {
+  /* height: 3.6rem; */
+  min-width: 28.8rem;
+  margin-top: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: var(--soft-orange);
+}
+
+.header--button {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items:center;
+  position: absolute;
+  text-decoration: none;
+  color: var(--black);
+  /* Toma el 100% de la altura del padre */
+  top: calc(100% - (48px/2));
+  left: calc(50% - (240px/2));
+  width: 240px;
+  height: 48px;
+  border: none;
+  /* border: 1px, solid, var(--black); */
+  border: none;
+  border-radius: 5px;
+  background-color: var(--off-white);
+  padding: 10px;
+  /* Sombra */
+  box-shadow: 4px 4px 8px rgb(89, 73, 30, 0.16);
+}
+
+.header--button p {
+  color: var(--warm-black);
+  font-weight: 700;
+  text-align: center;
+  line-height: 18px;
+  font-size: 1.4rem;
+}
+
+.header--button p span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url("./assets/icons/down-arrow.svg")
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items:center;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  background-color: var(--off-white);
+}
+
+.main-exchange-container 
+.backgroundImg {
+  width: 195px;
+  height: 195px;
+  margin: 55px auto;
+  background-image: url("./assets/img/Bitcoin.svg");
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-exchange-container
+.main-exchange-container–title{
+  width: 90%;
+  min-width: 410px;
+  max-width: 900px;
+}
+.main-exchange-container
+.main-exchange-container–title h2 {
+  display: block;
+  margin: 0 auto;
+  height: 52px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--warm-black) ;
+}
+
+.main-exchange-container
+.main-exchange-container–title p {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 54px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* padding: 10px; */
+  text-align: center;
+  color: var(--grey);
+}
+
