@@ -126,12 +126,17 @@ main {
   height: auto;
   background-color: var(--off-white);
 }
-
+.main-exchange-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+} 
 .main-exchange-container 
 .backgroundImg {
   width: 195px;
   height: 195px;
-  margin: 55px auto;
+  margin-top: 55px;
   background-image: url("./assets/img/Bitcoin.svg");
   background-position: center;
     background-repeat: no-repeat;
@@ -147,7 +152,6 @@ main {
 .main-exchange-container
 .main-exchange-container–title h2 {
   display: block;
-  margin: 0 auto;
   height: 52px;
   font-weight: 700;
   font-size: 24px;
@@ -169,4 +173,16 @@ main {
   text-align: center;
   color: var(--grey);
 }
-
+/* Hacer una tabla con grid: */
+.main-tables-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+}
+.main-tables-container .currency-table--container{
+    width: 202px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1px;
+} 
