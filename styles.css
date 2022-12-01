@@ -18,6 +18,9 @@
     --just-white: #fff;
     --font-sans: 'DM Sans', sans-serif;
     --font-inter: 'Inter', sans-serif;
+    --icon-arrow-down:  url("./assets/icons/down-arrow.svg");
+    --icon-trending-down: url("./assets/icons/trending-down.svg");
+    --icon-trending-up: url("./assets/icons/trending-up.svg");
 }
 
 * {
@@ -43,7 +46,7 @@ header {
   /* Gradinate ( Difuminado )*/
   background: linear-gradient(207.8deg,#201E1C 16.69%, #F7931A 100%);
 }
-header img {
+header > img {
   width: 15rem;
   height: 2.4rem;
   margin-top: 3rem;
@@ -58,7 +61,7 @@ header img {
   margin-top: 4rem;
 }
 
-.header--title-container h1 {
+.header--title-container > h1 {
   /* min-width: 28.8rem; */
   text-align:center;
   font-weight: 700;
@@ -101,7 +104,7 @@ header img {
   box-shadow: 4px 4px 8px rgb(89, 73, 30, 0.16);
 }
 
-.header--button p {
+.header--button > p {
   color: var(--warm-black);
   font-weight: 700;
   text-align: center;
@@ -109,12 +112,12 @@ header img {
   font-size: 1.4rem;
 }
 
-.header--button p span {
+.header--button p > span {
   display: inline-block;
   width: 13px;
   height: 8px;
   margin-left: 10px;
-  background-image: url("./assets/icons/down-arrow.svg")
+  background-image: var(--icon-arrow-down);
 }
 
 main {
@@ -150,7 +153,7 @@ main {
   max-width: 900px;
 }
 .main-exchange-container
-.main-exchange-container–title h2 {
+.main-exchange-container–title > h2 {
   display: block;
   height: 52px;
   font-weight: 700;
@@ -161,7 +164,7 @@ main {
 }
 
 .main-exchange-container
-.main-exchange-container–title p {
+.main-exchange-container–title > p {
   display: block;
   margin: 0 auto;
   margin-top: 20px;
@@ -174,15 +177,97 @@ main {
   color: var(--grey);
 }
 /* Hacer una tabla con grid: */
+.main-tables-container-2,
 .main-tables-container {
-    width: 100%;
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
     display: flex;
     flex-flow: column nowrap;
     place-items: center;
 }
+
+.main-tables-container-2 .brockers-table--container,
 .main-tables-container .currency-table--container{
-    width: 202px;
+    width: 70%;
+    /* height: 156px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1px;
+    font-family: var(--font-inter);
+    margin-bottom: 20px;
 } 
+
+.brockers-table--container  .brockers-table--title, 
+.currency-table--container .currency-table--title {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    line-height: 23px;
+    color: var(--bitcoin-orange);
+    background-color: var(--off-white);
+}
+
+.brockers-table--container > span, 
+.currency-table--container > span {
+    min-width: 120px;
+    max-width: 250px;
+    height: 39;
+    padding: 10px;
+    text-align: left;
+    background-color: var(--just-white);
+    /* border: 0.05px solid var(--grey); */
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+}
+
+
+.brockers-table--container .table__right, 
+.currency-table--container .table__right {
+    font-size: 1.4rem;
+    text-align: right;
+    font-weight: 400;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.brockers-table--container .table__top-left, 
+.currency-table--container .table__top-left {
+    border-radius: 15px 0 0 0;
+}
+
+.brockers-table--container .table__top-right, 
+.currency-table--container .table__top-right {
+    border-radius: 0 15px 0 0;
+}
+
+.brockers-table--container .table__bottom-right, 
+.currency-table--container .table__bottom-right {
+    border-radius: 0 0 15px 0;
+}
+
+.brockers-table--container .table__bottom-left, 
+.currency-table--container .table__bottom-left {
+    border-radius: 0 0 0 15px;
+}
+
+.currency-table--container > span > div {
+    width: 11px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.currency-table--container > span > .icon-down {
+    background-image: var(--icon-trending-down);
+}
+
+.currency-table--container > span > .icon-up {
+    background-image: var(--icon-trending-up);
+}
