@@ -176,10 +176,35 @@ main {
   text-align: center;
   color: var(--grey);
 }
+
+
+.main-tables {
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-tables #go-left {
+    width: 8px;
+    height: 12px;
+    background-image: url(./assets/icons/right-arrow.svg);
+    transform: rotate(180deg);
+    
+
+}
+.main-tables #go-right {
+    width: 8px;
+    height: 12px;
+    background-image: url(./assets/icons/right-arrow.svg);
+}
+
+
 /* Hacer una tabla con grid: */
 .main-tables-container-2,
 .main-tables-container {
-    width: 70%;
+    width: 100%;
     min-width: 235px;
     max-width: 500px;
     display: flex;
@@ -207,6 +232,9 @@ main {
     line-height: 23px;
     color: var(--bitcoin-orange);
     background-color: var(--off-white);
+}
+.brockers-table--container  .brockers-table--title {
+    color: var(--secundary-blue);
 }
 
 .brockers-table--container > span, 
@@ -253,6 +281,23 @@ main {
 .currency-table--container .table__bottom-left {
     border-radius: 0 0 0 15px;
 }
+.main-tables-container-2 .brockers-table--date, 
+.main-exchange-container .currency-table--date {
+   font-weight: 300;
+    width: auto;
+    height: 30px;
+    margin-top: 15px; 
+    padding: 8px;
+    border-radius: 8px;
+    margin: 7px;
+    font-size: 1.2rem
+}
+.main-exchange-container .currency-table--date {
+    background-color: var(--soft-orange);
+}
+.main-tables-container-2 .brockers-table--date {
+    background-color: var(--soft-blue);
+}
 
 .currency-table--container > span > div {
     width: 11px;
@@ -270,4 +315,9 @@ main {
 
 .currency-table--container > span > .icon-up {
     background-image: var(--icon-trending-up);
+}
+
+/* La clase inactive tiene que estar después de los estilos */
+.inactive {
+    display: none;
 }
