@@ -21,6 +21,8 @@
     --icon-arrow-down:  url("./assets/icons/down-arrow.svg");
     --icon-trending-down: url("./assets/icons/trending-down.svg");
     --icon-trending-up: url("./assets/icons/trending-up.svg");
+    --icon-batata: url("./assets/icons/batata.svg");
+    --icon-clock: url("./assets/icons/clock.svg");
 }
 
 * {
@@ -175,6 +177,8 @@ main {
   /* padding: 10px; */
   text-align: center;
   color: var(--grey);
+    min-width: 235px;
+    max-width: 500px;
 }
 
 
@@ -184,6 +188,8 @@ main {
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: center;
+    min-width: 235px;
+    max-width: 500px;
 }
 
 .main-tables #go-left {
@@ -290,7 +296,8 @@ main {
     padding: 8px;
     border-radius: 8px;
     margin: 7px;
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    margin-bottom: 40px;
 }
 .main-exchange-container .currency-table--date {
     background-color: var(--soft-orange);
@@ -317,6 +324,78 @@ main {
     background-image: var(--icon-trending-up);
 }
 
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    max-width: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
+    padding: 20px;
+    background-color: var(--warm-black);
+}
+
+.main-product-detail > .product-detail--batata-logo {
+    position: absolute;
+    top: -13px;
+    width: 41px;
+    height: 25px;
+    background-image: var(--icon-batata);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.product-cards-container {
+    display: block;
+    /* width: 80%; */
+}
+.main-product-detail .product-detail--tittle >  h2 {
+    color: var(--just-white);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.main-product-detail .product-detail--tittle  > p {
+    color: var(--grey);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.product-detail--card .clock {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: var(--icon-clock);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+
+}
+.product-cards-container .product--card-title{
+    color: var(--just-white);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 18px;
+    margin-bottom: 10px;
+
+}
+.product-cards-container .product--card-body{
+    color: var(--grey);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+}
 /* La clase inactive tiene que estar después de los estilos */
 .inactive {
     display: none;
