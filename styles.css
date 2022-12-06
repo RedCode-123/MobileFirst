@@ -23,6 +23,10 @@
     --icon-trending-up: url("./assets/icons/trending-up.svg");
     --icon-batata: url("./assets/icons/batata.svg");
     --icon-clock: url("./assets/icons/clock.svg");
+    --icon-eye: url("./assets/icons/eye.svg");
+    --icon-money: url("./assets/icons/dollar-sign.svg");
+    --icon-money: url("./assets/icons/dollar-sign.svg");
+    --icon-check: url("./assets/icons/check-circle.svg");
 }
 
 * {
@@ -347,11 +351,8 @@ main {
     background-size: cover;
 
 }
-.product-cards-container {
-    display: block;
-    /* width: 80%; */
-}
-.main-product-detail .product-detail--tittle >  h2 {
+
+.main-product-detail .product-detail--title >  h2 {
     color: var(--just-white);
     font-weight: 700;
     font-size: 2.4rem;
@@ -360,7 +361,7 @@ main {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.main-product-detail .product-detail--tittle  > p {
+.main-product-detail .product-detail--title  > p {
     color: var(--grey);
     font-weight: 500;
     font-size: 1.4rem;
@@ -368,33 +369,67 @@ main {
     text-align: center;
     margin-bottom: 40px;
 }
-.product-detail--card .clock {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-image: var(--icon-clock);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 20px;
 
+.product-cards-container {
+    display: flex;
+    flex-flow: column nowrap;
+    place-items: center;
 }
-.product-cards-container .product--card-title{
+
+.product-detail--card {
+    width: 100%;
+    min-width: 288px;
+    max-width: 400px;
+    min-height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--black);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.product-detail--card .product--card-title{
     color: var(--just-white);
     font-style: normal;
     font-weight: 700;
     font-size: 1.8rem;
-    line-height: 18px;
-    margin-bottom: 10px;
+    line-height: 1.8rem;
+    margin-bottom: 15px;
 
 }
 .product-cards-container .product--card-body{
     color: var(--grey);
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
 
+}
+
+.product-detail--card .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+
+}
+.product-detail--card .clock-icon {
+    background-image: var(--icon-clock);
+}
+
+.product-detail--card .eye-icon {
+    background-image: var(--icon-eye);
+}
+
+.product-detail--card .money-icon {
+    background-image: var(--icon-money);
+}
+
+.product-detail--card .check-icon {
+    background-image: var(--icon-check);
 }
 /* La clase inactive tiene que estar después de los estilos */
 .inactive {
