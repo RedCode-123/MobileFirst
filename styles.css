@@ -27,6 +27,7 @@
     --icon-money: url("./assets/icons/dollar-sign.svg");
     --icon-money: url("./assets/icons/dollar-sign.svg");
     --icon-check: url("./assets/icons/check-circle.svg");
+    --img-bitcoinbaby: url("./assets/img/bitcoinbaby2x.jpg");
 }
 
 * {
@@ -40,13 +41,17 @@ html {
 }
 
 header {
+    margin: 0 auto;
   position: relative;
+  /* display: flex; */
+  /* flex-flow: column nowrap; */
   display: grid;
   grid-template-columns: 1fr;
   /* grid-template-rows: auto; */
   place-items:center;
   width: 100%;
   min-width: 32rem;
+  max-width: 50rem;
   height: 33.4rem;
   text-align: center;
   /* Gradinate ( Difuminado )*/
@@ -167,6 +172,8 @@ main {
   line-height: 26px;
   text-align: center;
   color: var(--warm-black) ;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 .main-exchange-container
@@ -431,6 +438,31 @@ main {
 .product-detail--card .check-icon {
     background-image: var(--icon-check);
 }
+
+.bitcoin-img-container {
+    width: 100%;
+    min-width: 320px;
+    max-width: 500px;
+    height: 60vh;
+    background-image: var(--img-bitcoinbaby);
+    background-position: center;
+    background-image: cover;
+    background-repeat: no-repeat;
+    /* display: flex; */
+    /* flex-flow: column nowrap; */
+    /* align-items: center; */
+}
+
+.bitcoin-img-container h2 {
+    /* margin-top: 20px; */
+     color: var(--just-white) ;
+    padding-top: 60px;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+
+}
+
 /* La clase inactive tiene que estar después de los estilos */
 .inactive {
     display: none;
