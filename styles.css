@@ -503,8 +503,8 @@ main {
 .plans-container--slider {
     display: flex;
     flex-flow: row nowrap;
-    column-gap: 5px;
-    justify-content: center;
+    column-gap: 10px;
+    /* justify-content: center; */
     align-items: center;
     height: 316px;
     /* Crear un scroll usando CSS */
