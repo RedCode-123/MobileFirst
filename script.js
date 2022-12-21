@@ -14,6 +14,7 @@ function leftAction() {
     currency.classList.toggle('inactive');
     brockers.classList.toggle('inactive');
 }
+
 function rightAction() {
     // console.log('Ir a la derecha');
     currency.classList.toggle('inactive');
