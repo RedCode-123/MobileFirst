@@ -197,13 +197,15 @@ main {
 
 
 .main-tables {
-    width: 90%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    min-width: 235px;
+    margin: 0 auto;
+    /* width: 100%; */
+    min-width: 320px;
     max-width: 500px;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 0.1px;
 }
 
 .main-tables #go-left {
@@ -224,24 +226,24 @@ main {
 /* Hacer una tabla con grid: */
 .main-tables-container-2,
 .main-tables-container {
-    width: 100%;
-    min-width: 235px;
+  margin: 0 auto;
+    width: 50%;
+    min-width: 230px;
     max-width: 500px;
     display: flex;
     flex-flow: column nowrap;
-    place-items: center;
 }
 
 .main-tables-container-2 .brockers-table--container,
 .main-tables-container .currency-table--container{
-    width: 70%;
+    width: 30%;
     /* height: 156px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 1px;
     font-family: var(--font-inter);
     margin-bottom: 20px;
-} 
+    column-gap: 1px;
+}
 
 .brockers-table--container  .brockers-table--title, 
 .currency-table--container .currency-table--title {
@@ -310,7 +312,8 @@ main {
     padding: 8px;
     border-radius: 8px;
     margin: 7px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-align: center;
     margin-bottom: 40px;
 }
 .main-exchange-container .currency-table--date {
