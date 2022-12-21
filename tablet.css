@@ -1,0 +1,33 @@
+
+.main-tables #go-left,
+.main-tables #go-right {
+    display: none;
+}
+
+.main-tables {
+    column-gap: 10vw;
+}
+.main-tables-container-2,
+.main-tables-container {
+    display: flex;
+}
+.product-cards-container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 915px;
+}
+
+.plans-container--slider {
+    max-width: 915px;
+    margin: 0 auto;
+}
+
+footer div {
+    max-width: 915px;
+    margin: 0 auto;
+}
+
+
+.bitcoin-img-container {
+    height: 80vh;
+}
