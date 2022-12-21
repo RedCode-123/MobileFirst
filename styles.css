@@ -53,7 +53,7 @@ header {
   /* grid-template-rows: auto; */
   place-items:center;
   width: 100%;
-  min-width: 32rem;
+  min-width: 320px;
   /* max-width: 50rem; */
   height: 33.4rem;
   text-align: center;
@@ -145,6 +145,7 @@ main {
 }
 .main-exchange-container {
     width: 100%;
+    min-width: 320px;
     display: flex;
     flex-flow: column nowrap;
     place-items: center;
